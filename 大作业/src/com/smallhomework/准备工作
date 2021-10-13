@@ -1,0 +1,31 @@
+任务：在线货物管理系统----用户信息管理模块
+子任务：
+    用户信息注册
+    用户信息查询
+    用户信息删除
+    用户信息更新
+
+准备工作
+    1. 创建用户信息Users.frm
+    CREATE TABLE Users(
+
+        userId      int             primary key auto_increment,             #用户编号
+        userName    varchar(50),                                            #用户名称
+        password    varchar(50),                                            #用户密码
+        sex         char(1),                                                #用户性别
+        email       varchar(50)                                             #用户邮箱
+    )
+
+    CREATE TABLE Goods(
+
+        goodNum     String,                                                 #货物标号
+        length      int,                                                    #货物长度
+        width       int,                                                    #货物宽度
+        height      int,                                                    #货物高度
+    )
+
+    2. 在src下com.smallhomework.entity.Users实体类
+
+    3. 在src下com.smallhomework.util.JdbcUtil工具类
+
+    4. 在web下WEB_INF下创建lib文件夹 存放mysql提供JDBC实现的jar包

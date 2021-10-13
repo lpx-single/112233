@@ -1,0 +1,37 @@
+学生表：
+CREATE TABLE Stu(
+    stuId           varchar(50)     primary key,                            #学生编号
+    stuName         varchar(50),                                            #学生姓名
+    instituteNo         int,                                                    #学生学院
+    stuAge          int,                                                    #学生年龄
+    stuSex          varchar(1),                                             #学生性别
+    stuPassword     varchar(50)                                             #学生平台密码
+    )
+
+课程表：
+CREATE TABLE Course(
+    courseId        varchar(50)     primary key,                            #课程编码
+    courseName      varchar(50),                                            #课程名称
+    courseLast      int,                                                    #课程学时
+    courseScore     int,                                                    #课程学时
+    instituteNo    int,                                                    #课程开设学院
+    courseTime      int,                                                    #课程时间
+    courseType      int,			     #课程类型
+    teachName       varchar(50)                                             #课程老师
+    )
+
+教师表：
+CREATE TABLE Teacher(
+    teachId         varchar(50)     primary key,                            #老师编码
+    teachName       varchar(50),                                            #老师姓名
+    teachSex        varchar(1),                                             #老师性别
+    instituteNo     varchar(50),                                            #老师院系
+    teachFiled      varchar(50),                                            #老师研究领域
+    courseName      varchar(50)                                             #开设课程
+    )
+
+选课表：
+CREATE TABLE Curriculum(
+    stuId           varchar(50),                                            #选课学生编号
+    courseId        varchar(50)                                             #选课课程编号
+)
